@@ -63,7 +63,7 @@ Below are the key arguments used in this project:
 - `--tail_rho`: Hyperparameter $\rho_{\text{tail}}$ in SSE-SAM.
 - `--gamma`: Hyperparameter $\gamma$ in SSE-SAM specifying stage transition.
 
-## Usage of `ssesam` Optimizer
+## Usage of `SSESAM` Optimizer
 
 Our SSE-SAM optimizer is included in `ssesam.py`. Example usage:
 
