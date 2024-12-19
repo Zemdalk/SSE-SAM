@@ -4,7 +4,7 @@ Xingyu Lyu, Qianqian Xu, Zhiyong Yang, Shaojie Lyu, Qingming Huang
 
 ---
 
-This is the official implementation of "SSE-SAM: Balancing Head and Tail Classes Gradually through Stage-Wise SAM" (Accepted by AAAI 2025).
+This is the official implementation of "SSE-SAM: Balancing Head and Tail Classes Gradually through Stage-Wise SAM"[[arXiv](https://arxiv.org/abs/2412.13715)] (Accepted by AAAI 2025).
 
 ## Abstract
 
