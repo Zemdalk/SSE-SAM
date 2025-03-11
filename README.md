@@ -115,9 +115,9 @@ if optim_mode == 'ssesam':
 |------------------|-------------------------------|-------------------------------------------------------------------------------------------------------|
 | `optimizer`     | `torch.optim.Optimizer`       | A PyTorch optimizer instance, such as `SGD`, which performs the underlying optimization.    |
 | `model`         | `torch.nn.Module`            | The neural network model whose parameters will be optimized.                                         |
-| `head_rho`      | `float`                       | The \(\rho\) parameter for the head classes, controlling the magnitude of SAM perturbation on head classes.          |
-| `tail_rho`      | `float`                       | The \(\rho\) parameter for the tail classes, controlling the magnitude of SAM perturbation on tail classes.          |
-| `gamma`         | `float`, optional (default=0) | Fraction of training epochs after which `head_rho` will decay to 0. Must satisfy \(0 \leq \gamma < 1\). |
+| `head_rho`      | `float`                       | The $\rho$ parameter for the head classes, controlling the magnitude of SAM perturbation on head classes.          |
+| `tail_rho`      | `float`                       | The $\rho$ parameter for the tail classes, controlling the magnitude of SAM perturbation on tail classes.          |
+| `gamma`         | `float`, optional (default=0) | Fraction of training epochs after which `head_rho` will decay to 0. Must satisfy $0 \leq \gamma < 1$. |
 | `total_epochs`  | `int`, optional (default=200) | Total number of training epochs, used in conjunction with `gamma` to determine decay timing.         |
 
 ---
@@ -126,7 +126,7 @@ if optim_mode == 'ssesam':
 
 | Method                     | Description                                                                                              |
 |--------------------------------|--------------------------------------------------------------------------------------------------------------|
-| `compute_and_add_epsilon(n_i)` | Computes the perturbation \(\epsilon\) for the specified class type (`head` or `tail`) and updates parameters.|
+| `compute_and_add_epsilon(n_i)` | Computes the perturbation $\epsilon$ for the specified class type (`head` or `tail`) and updates parameters.|
 | `compute_grad_sum_and_restore_p()` | Accumulates gradients and restores model parameters by removing applied perturbations.                         |
 | `update()`                     | Performs the optimization step using accumulated gradients and clears the internal state.                    |
 | `update_rho()`                 | Dynamically updates the `head_rho` value to 0 after the specified cut-off epoch (`gamma * total_epochs`).     |
